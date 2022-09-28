@@ -37,7 +37,7 @@ public class Grafo {
         this.vertices = new ABB<>();
     }
 
-    public void caminhoEuleriano(Lista<Vertice> vertices){
+    public void caminhoEuleriano(Lista<Vertice> vertices) {
     }
 
     /**
@@ -108,12 +108,12 @@ public class Grafo {
 
     }
 
-    // public void carregar(String nomeArquivo) {
+    public void carregar(String nomeArquivo) {
 
-    // }
+    }
 
-    // public void salvar(String nomeArquivo) {
+    public void salvar(String nomeArquivo) {
 
-    // }
+    }
 
 }
