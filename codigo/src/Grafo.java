@@ -37,12 +37,45 @@ public class Grafo {
         this.vertices = new ABB<>();
     }
 
-    public void carregar(String nomeArquivo) {
-
+    public void caminhoEuleriano(Lista<Vertice> vertices){
     }
 
-    public void salvar(String nomeArquivo) {
+    /**
+     * Verifica se este é um grafo completo.
+     * 
+     * @return TRUE para grafo completo, FALSE caso contrário
+     */
 
+    public boolean completo() {
+        boolean resposta = true;
+
+        return resposta;
+    }
+
+    public boolean euleriano() {
+        return false;
+    }
+
+    public Vertice existeVertice(int idVertice) {
+        return this.vertices.find(idVertice);
+    }
+
+    public Aresta existeAresta(int verticeA, int verticeB) {
+        return null;
+    }
+
+    public Grafo subGrafo(Lista<Vertice> vertices) {
+        Grafo subgrafo = new Grafo("Subgrafo de " + this.nome);
+
+        return subgrafo;
+    }
+
+    public int tamanho() {
+        return 0;
+    }
+
+    public int ordem() {
+        return this.vertices.size();
     }
 
     /**
@@ -75,37 +108,12 @@ public class Grafo {
 
     }
 
-    public Vertice existeVertice(int idVertice) {
-        return this.vertices.find(idVertice);
-    }
+    // public void carregar(String nomeArquivo) {
 
-    public Aresta existeAresta(int verticeA, int verticeB) {
-        return null;
-    }
+    // }
 
-    /**
-     * Verifica se este é um grafo completo.
-     * 
-     * @return TRUE para grafo completo, FALSE caso contrário
-     */
-    public boolean completo() {
-        boolean resposta = true;
+    // public void salvar(String nomeArquivo) {
 
-        return resposta;
-    }
-
-    public Grafo subGrafo(Lista<Vertice> vertices) {
-        Grafo subgrafo = new Grafo("Subgrafo de " + this.nome);
-
-        return subgrafo;
-    }
-
-    public int tamanho() {
-        return 0;
-    }
-
-    public int ordem() {
-        return this.vertices.size();
-    }
+    // }
 
 }
