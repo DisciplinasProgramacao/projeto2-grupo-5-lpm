@@ -71,4 +71,8 @@ public class Aresta {
         return this.visitada;
     }
 
+    public boolean add(int destino2, Aresta aresta) {
+        return false;
+    }
+
 }

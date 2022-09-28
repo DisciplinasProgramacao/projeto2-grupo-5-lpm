@@ -25,8 +25,7 @@
 /**
  * Classe básica para um Grafo simples
  */
-public abstract class Grafo {
-
+public class Grafo {
     public final String nome;
     private ABB<Vertice> vertices;
 
@@ -36,10 +35,6 @@ public abstract class Grafo {
     public Grafo(String nome) {
         this.nome = nome;
         this.vertices = new ABB<>();
-    }
-
-    public Grafo caminhoEuleriano(Lista<Vertice>) {
-        return null;
     }
 
     public void carregar(String nomeArquivo) {
@@ -75,7 +70,9 @@ public abstract class Grafo {
             chegada.addAresta(origem);
             adicionou = true;
         }
+
         return adicionou;
+
     }
 
     public Vertice existeVertice(int idVertice) {
@@ -83,7 +80,7 @@ public abstract class Grafo {
     }
 
     public Aresta existeAresta(int verticeA, int verticeB) {
-        return this.vertices.find(verticeA).existeAresta(verticeB);
+        return null;
     }
 
     /**
@@ -93,19 +90,18 @@ public abstract class Grafo {
      */
     public boolean completo() {
         boolean resposta = true;
-        return resposta;
-    }
 
-    public boolean Euleriano() {
+        return resposta;
     }
 
     public Grafo subGrafo(Lista<Vertice> vertices) {
         Grafo subgrafo = new Grafo("Subgrafo de " + this.nome);
+
         return subgrafo;
     }
 
     public int tamanho() {
-        return this.vertices.size()+this.arestas.size();
+        return 0;
     }
 
     public int ordem() {
