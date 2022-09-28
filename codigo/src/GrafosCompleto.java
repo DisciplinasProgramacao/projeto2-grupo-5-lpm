@@ -1,6 +1,8 @@
 public class GrafosCompleto extends Grafo {
 
+    private ABB<Aresta> arestas;
     public int ordem;
+
 
     public GrafosCompleto(String nome) {
         super(nome);
