@@ -22,7 +22,13 @@ public abstract class GrafoMutavel extends Grafo {
     }
 
     public boolean delVertice(int idVertice) {
-        return false;
+        Vertice v = this.existeVertice(idVertice);
+        if(v!=null){
+            this.vertices.remove(idVertice);
+            return true;
+        } else{
+            return false;
+        }
     }
     
     public void salvar(String nomeArquivo) {

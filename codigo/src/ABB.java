@@ -36,4 +36,8 @@ public class ABB<T> {
         T[] allData = this.data.values().toArray(array);
         return allData;
     }
+
+    public T remove(int key){
+        return this.data.remove(key);
+    }
 }
