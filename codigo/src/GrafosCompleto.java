@@ -8,10 +8,11 @@ public class GrafosCompleto extends Grafo {
     }
 
     /**
-     * n é o quantidade do Vertice
+     * If the number of edges in the graph is equal to the number of edges in a complete graph with the
+     * same number of vertices, then the graph is complete
      * 
-     * @param n
-     * @return
+     * @param n number of vertices
+     * @return The method is returning a boolean value.
      */
     public boolean completo(int n) {
         if (n * (n - 1) / 2 == this.arestas.size()) {

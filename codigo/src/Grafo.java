@@ -1,3 +1,5 @@
+import java.util.List;
+
 /** 
  * MIT License
  *
@@ -28,7 +30,8 @@
 public class Grafo {
     public final String nome;
     private ABB<Vertice> vertices;
-
+    
+   
     /**
      * Construtor. Cria um grafo vazio com capacidade para MAX_VERTICES
      */
@@ -36,6 +39,7 @@ public class Grafo {
         this.nome = nome;
         this.vertices = new ABB<>();
     }
+
 
     public void caminhoEuleriano(Lista<Vertice> vertices) {
     }
@@ -56,6 +60,12 @@ public class Grafo {
         return false;
     }
 
+    /**
+     * It returns a vertex if it exists in the graph
+     * 
+     * @param idVertice The id of the vertex to be searched for.
+     * @return The method is returning the vertice that has the same id as the parameter.
+     */
     public Vertice existeVertice(int idVertice) {
         return this.vertices.find(idVertice);
     }
@@ -64,6 +74,13 @@ public class Grafo {
         return null;
     }
 
+    /**
+     * Given a list of vertices, return a new graph that contains only those vertices and the edges
+     * between them.
+     * 
+     * @param vertices a list of vertices
+     * @return A new graph with the name "Subgraph of" + the name of the graph.
+     */
     public Grafo subGrafo(Lista<Vertice> vertices) {
         Grafo subgrafo = new Grafo("Subgrafo de " + this.nome);
 

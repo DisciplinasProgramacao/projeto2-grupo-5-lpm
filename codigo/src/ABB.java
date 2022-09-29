@@ -12,6 +12,13 @@ public class ABB<T> {
         return this.data.get(key);
     }
 
+    /**
+     * This function adds a new element to the data structure if the key is not already present
+     * 
+     * @param key The key to be used to store the element in the map.
+     * @param newElement The element to be added to the map.
+     * @return A boolean value.
+     */
     public boolean add(int key, T newElement){
         boolean result = false;
         if(!this.data.containsKey(key)){
