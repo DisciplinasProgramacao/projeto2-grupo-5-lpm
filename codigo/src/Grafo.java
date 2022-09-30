@@ -55,7 +55,9 @@ public class Grafo {
 
         return resposta;
     }
-
+    /*
+     * Verificar se o grafo é euleriano
+     */
     public boolean euleriano() {
         return false;
     }
@@ -69,7 +71,9 @@ public class Grafo {
     public Vertice existeVertice(int idVertice) {
         return this.vertices.find(idVertice);
     }
-
+    /*
+     * Verificar de existe aresta
+     */
     public Aresta existeAresta(int verticeA, int verticeB) {
         return null;
     }
@@ -86,11 +90,12 @@ public class Grafo {
 
         return subgrafo;
     }
-
+    /*
+     * Verificar o tamanho do grafo
+     */
     public int tamanho() {
         return 0;
     }
-
     public int ordem() {
         return this.vertices.size();
     }
