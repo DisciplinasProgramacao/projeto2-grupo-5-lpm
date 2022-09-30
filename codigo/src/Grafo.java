@@ -29,8 +29,7 @@ import java.util.List;
  */
 public class Grafo {
     public final String nome;
-    private ABB<Vertice> vertices;
-    
+    protected ABB<Vertice> vertices;
    
     /**
      * Construtor. Cria um grafo vazio com capacidade para MAX_VERTICES
@@ -39,7 +38,6 @@ public class Grafo {
         this.nome = nome;
         this.vertices = new ABB<>();
     }
-
 
     public void caminhoEuleriano(Lista<Vertice> vertices) {
     }

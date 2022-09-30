@@ -29,7 +29,7 @@ public class BuscaProfundidade{
 		saida += u + ", ";	//Armazena a ordem de visita dos vertices em uma string
 		cor[u] = cinza;
 		this.d[u] = ++tempo;
-		if (!grafo.vertices[u].isEmpty()) {
+		if (!grafo.vertices.isEmpty()) {
 			List<Integer> listaAdj = grafo.vertices[u];
 			for (Integer v : listaAdj) {
 				if (cor[v] == branco) {
