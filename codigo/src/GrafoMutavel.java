@@ -14,6 +14,7 @@ public abstract class GrafoMutavel extends Grafo {
         return super.addVertice(id);
     }
 
+    @Override
     public void carregar(String nomeArquivo) {
     }
 
@@ -31,6 +32,7 @@ public abstract class GrafoMutavel extends Grafo {
         }
     }
     
+    @Override
     public void salvar(String nomeArquivo) {
     }
 }

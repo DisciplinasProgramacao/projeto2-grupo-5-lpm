@@ -41,6 +41,17 @@ public class Vertice {
     }
 
     /**
+     * Retorna o ID do vertice
+     */
+    public int getId() {
+        return this.id;
+    }
+
+    public ABB<Aresta> getArestas() {
+        return this.arestas;
+    }
+
+    /**
      * Adiciona uma aresta neste vértice para um destino
      * 
      * @param peso Peso da aresta (1 para grafos não ponderados)
@@ -48,6 +59,20 @@ public class Vertice {
      */
     public boolean addAresta(int destino) {
         return this.arestas.add(destino, new Aresta(0, destino));
+    }
+
+    /**
+     * Adiciona uma aresta neste vértice para um destino
+     * 
+     * @param peso Peso da aresta (1 para grafos não ponderados)
+     * @param dest Vértice de destino
+     */
+    public boolean delAresta(int destino) {
+        if (this.arestas.find(destino) == null)
+            return false;
+
+        this.arestas.remove(destino);
+        return true;
     }
 
     /**

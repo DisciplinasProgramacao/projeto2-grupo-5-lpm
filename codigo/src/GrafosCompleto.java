@@ -1,6 +1,6 @@
 public class GrafosCompleto extends Grafo {
 
-    private ABB<Aresta> arestas;    
+    private ABB<Aresta> arestas;
     public int ordem;
 
     public GrafosCompleto(String nome) {
@@ -8,7 +8,8 @@ public class GrafosCompleto extends Grafo {
     }
 
     /**
-     * If the number of edges in the graph is equal to the number of edges in a complete graph with the
+     * If the number of edges in the graph is equal to the number of edges in a
+     * complete graph with the
      * same number of vertices, then the graph is complete
      * 
      * @param n number of vertices
@@ -23,7 +24,7 @@ public class GrafosCompleto extends Grafo {
     }
 
     @Override
-    public Aresta existeAresta(int verticeA, int verticeB) {
+    public boolean existeAresta(int verticeA, int verticeB) {
         return super.existeAresta(verticeA, verticeB);
     }
 

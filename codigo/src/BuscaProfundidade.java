@@ -1,24 +1,24 @@
-import java.util.List;
 
-public class BuscaProfundidade{
-    public static final byte branco = 0;
+public class BuscaProfundidade {
+	public static final byte branco = 0;
 	public static byte cinza = 1;
 	public static byte preto = 2;
-	private int d [ ] , t [ ] , antecessor [ ] ;
+	private int d[], t[], antecessor[];
 	private String saida;
 	private Grafo grafo;
 
-   public BuscaProfundidade(Grafo g){
-        this.grafo = g;
-		int	n =	grafo.ordem();
-		d =	new int[n];
-		t = new int[n];  
+	public BuscaProfundidade(Grafo g) {
+		this.grafo = g;
+		int n = grafo.ordem();
+		d = new int[n];
+		t = new int[n];
 		antecessor = new int[n];
 		saida = "";
-   }
-	
+	}
+
 	/**
 	 * Metodo auxiliar da busca em profundidade.
+	 * 
 	 * @param u
 	 * @param tempo
 	 * @param cor
@@ -26,23 +26,23 @@ public class BuscaProfundidade{
 	 */
 	private int visitaDfs(int u, int tempo, int cor[]) {
 		System.out.println(" Visitando o vertice: " + u);
-		saida += u + ", ";	//Armazena a ordem de visita dos vertices em uma string
+		saida += u + ", "; // Armazena a ordem de visita dos vertices em uma string
 		cor[u] = cinza;
 		this.d[u] = ++tempo;
-		if (!grafo.vertices.isEmpty()) {
-			List<Integer> listaAdj = grafo.vertices[u];
-			for (Integer v : listaAdj) {
-				if (cor[v] == branco) {
-					this.antecessor[v] = u;
-					tempo = this.visitaDfs(v, tempo, cor);
-				}
-			}
+		if (grafo.vertices.size() > 0) {
+			// List<Integer> listaAdj = grafo.vertices[u];
+			// for (Integer v : listaAdj) {
+			// if (cor[v] == branco) {
+			// this.antecessor[v] = u;
+			// tempo = this.visitaDfs(v, tempo, cor);
+			// }
+			// }
 		}
 		cor[u] = preto;
 		this.t[u] = ++tempo;
 		return tempo;
 	}
-	
+
 	/**
 	 * Metodo que realiza a busca em profundidade propriamente dita.
 	 */
